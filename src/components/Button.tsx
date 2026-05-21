@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { type ReactNode } from 'react'
 
 type ButtonProps = {
-  text: string 
+  children: ReactNode 
 
 }
 
 
-const Button = (props : ButtonProps) => {
+const Button = ({children} : ButtonProps) => {
   return (
     <button className='bg-violet-600 hover:bg-violet-500 transition-colors rounded px-2 py-1 disabled:opacity-30 disabled:cursor-not-allowed'>
-      {props.text}
+      {children}
     </button>
   )
 }
